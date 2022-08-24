@@ -11,30 +11,30 @@ let infoCarrito = document.querySelector(".product-detail")
 
 user.addEventListener("click", () =>{
     desplegarMenus(infoUser)
-    if (!infoCarrito.classList.contains("inactive")) {
+    // if (!infoCarrito.classList.contains("inactive")) {
         infoCarrito.classList.add("inactive")
-    }
+    // }
 
 })
 
 menuBurguer.addEventListener("click", () =>{
     desplegarMenus(mobileMenu)
-    if (!infoCarrito.classList.contains("inactive")) {
+    // if (!infoCarrito.classList.contains("inactive")) {
         infoCarrito.classList.add("inactive")
-    }
+    // }
 
 })
 
 carritoIcon.addEventListener("click", () =>{
     desplegarMenus(infoCarrito) 
     
-    if (!mobileMenu.classList.contains("inactive")) {
+    // if (!mobileMenu.classList.contains("inactive")) {
         mobileMenu.classList.add("inactive")   
-    }
+    // }
     
-    if (!infoUser.classList.contains("inactive")) {
+    // if (!infoUser.classList.contains("inactive")) {
         infoUser.classList.add("inactive")
-    }
+    // }
 
 
 })
