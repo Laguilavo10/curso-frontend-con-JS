@@ -8,50 +8,32 @@ let carritoIcon = document.querySelector(".navbar-shopping-cart")
 let infoCarrito = document.querySelector(".product-detail")
 
 
+function desplegarMenus(cambio) {
+    cambio.classList.toggle('inactive')
+}
 
 user.addEventListener("click", () =>{
     desplegarMenus(infoUser)
-    // if (!infoCarrito.classList.contains("inactive")) {
-        infoCarrito.classList.add("inactive")
-    // }
-
+    infoCarrito.classList.add("inactive")
 })
 
 menuBurguer.addEventListener("click", () =>{
     desplegarMenus(mobileMenu)
-    // if (!infoCarrito.classList.contains("inactive")) {
-        infoCarrito.classList.add("inactive")
-    // }
-
+    infoCarrito.classList.add("inactive")
 })
 
 carritoIcon.addEventListener("click", () =>{
     desplegarMenus(infoCarrito) 
-    
-    // if (!mobileMenu.classList.contains("inactive")) {
-        mobileMenu.classList.add("inactive")   
-    // }
-    
-    // if (!infoUser.classList.contains("inactive")) {
-        infoUser.classList.add("inactive")
-    // }
-
-
+    mobileMenu.classList.add("inactive")   
+    infoUser.classList.add("inactive")
 })
 
 
-// function inactiveMenu(params) {
-//inteto propio//
-    // if (infoUser.classList.contains('inactive')) {
-    //     infoUser.classList.remove('inactive')
-    // } else {
-    //     infoUser.classList.add('inactive')
-    // }
+let productos = document.querySelector(".product-card")
+let containerProductos = document.querySelector(".cards-container")
 
-//respuesta de juandc
-    // infoUser.classList.toggle('inactive')
-// }
-
-function desplegarMenus(cambio) {
-    cambio.classList.toggle('inactive')
+//intento propio duplicando divs y sus nodos con JS en html
+for (let index = 0; index < 8; index++) {
+    let casilla = productos.cloneNode(true)
+    containerProductos.append(casilla)
 }
