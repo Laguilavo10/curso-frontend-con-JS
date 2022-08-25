@@ -15,17 +15,20 @@ function desplegarMenus(cambio) {
 user.addEventListener("click", () =>{
     desplegarMenus(infoUser)
     infoCarrito.classList.add("inactive")
+    productDetailSecond.classList.add("inactive")
 })
 
 menuBurguer.addEventListener("click", () =>{
     desplegarMenus(mobileMenu)
     infoCarrito.classList.add("inactive")
+    productDetailSecond.classList.add("inactive")
 })
 
 carritoIcon.addEventListener("click", () =>{
     desplegarMenus(infoCarrito) 
     mobileMenu.classList.add("inactive")   
     infoUser.classList.add("inactive")
+    productDetailSecond.classList.add("inactive")
 })
 
 
@@ -65,7 +68,9 @@ crearNuevosProductos("Bicicleta", 500, "https://images.pexels.com/photos/276517/
 crearNuevosProductos("Televisor", 1000, "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
 crearNuevosProductos("Celular", 200, "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
 
+
 let cardsContainer = document.querySelector(".cards-container")
+
 
 for (const iterator of productList) { 
 
@@ -95,5 +100,21 @@ for (const iterator of productList) {
 
     //integrando todo al HMTL
     cardsContainer.appendChild(productCard)
-    
 }
+
+let productCardSecond= document.querySelector(".product-card > img")
+let productDetailSecond = document.querySelector(".product-detail-second")
+let cerraProductDetail = document.querySelector('.product-detail-close')
+
+console.log(productCardSecond);
+
+productCardSecond.addEventListener('click', ()=>{
+    mobileMenu.classList.add("inactive")   
+    infoUser.classList.add("inactive")
+    infoCarrito.classList.add("inactive")
+    productDetailSecond.classList.remove("inactive")
+})
+cerraProductDetail.addEventListener('click', ()=>{
+    productDetailSecond.classList.add("inactive")
+})
+
