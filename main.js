@@ -33,16 +33,20 @@ let productos = document.querySelector(".product-card")
 let containerProductos = document.querySelector(".cards-container")
 
 
-/*
+// /*
 
 //intento propio duplicando divs y sus nodos con JS en html
 
-for (let index = 0; index < 8; index++) {
-    let casilla = productos.cloneNode(true)
-    containerProductos.append(casilla)
-}
+// for (let index = 0; index < 1; index++) {
+//     let casilla = productos.cloneNode(true)
+//     containerProductos.append(casilla)
+//     console.log({casilla});
+//     console.log(casilla.childNodes);
+//     let ke = casilla.childNodes[3].cloneNode(true)
+//     console.log(ke);
+// }
 
-*/
+// */
 
 let productList = []
 
@@ -57,9 +61,9 @@ function crearNuevosProductos(nombre1, precio1, img1) {
     )
 }
 
-crearNuevosProductos("bicicleta", 500, "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
-crearNuevosProductos("televisor", 1000, "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
-crearNuevosProductos("celular", 200, "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+crearNuevosProductos("Bicicleta", 500, "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+crearNuevosProductos("Televisor", 1000, "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+crearNuevosProductos("Celular", 200, "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
 
 let cardsContainer = document.querySelector(".cards-container")
 
@@ -91,8 +95,5 @@ for (const iterator of productList) {
 
     //integrando todo al HMTL
     cardsContainer.appendChild(productCard)
-
-
     
 }
-
